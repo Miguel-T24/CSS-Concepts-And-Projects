@@ -1,0 +1,55 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: #8AF3F9;
+    background-size: cover;
+}
+
+/* rotate image */
+.rotate_01{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -60px 0 0 -280px;
+    transition: all 3s;
+}
+
+.rotate_01:hover{
+    transform: rotate(360deg);
+}
+
+
+/* rotate image 2 */
+.rotate_02{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 65%;
+    width: 150px;
+    height: 150px;
+    margin: -60px 0 0 -280px;
+    transition: all 2s;
+}
+
+.rotate_02:hover{
+    transform: rotate(360deg);
+}
+
+/* Rotate image 3 */
+.rotate_03{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    width: 150px;
+    height: 150px;
+    margin: -60px 0 0 -280px;
+    transition: all 0.5s;
+}
+
+.rotate_03:hover{
+    transform: rotate(360deg);
+}
