@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not and Empty selectors</title>
+    <style>
+        /* Not */
+        /* p:not(#second){
+            padding: 20px;
+            background-color: tan;
+        } */
+        /* Empty */
+        p:empty{
+            height: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Not -->
+    <!-- <p>Lorem, ipsum 1</p>
+    <p id = "second">Lorem, ipsum 2</p>
+    <p>Lorem, ipsum 3</p>
+    <p>Lorem, ipsum 4</p> -->
+
+    <!-- Empty -->
+    <p></p>
+    <p><!-- This is empty comment--></p>
+    <p>Lorem, ipsum.</p>
+    <p>Lorem, ipsum.</p>
+
+
+</body>
+</html>

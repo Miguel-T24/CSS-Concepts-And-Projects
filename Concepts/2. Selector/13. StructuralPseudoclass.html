@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural Pseudo Class Selectors</title>
+    <style>
+        p:first-child{
+            background-color: tan;
+            color: white;
+            padding: 20px;
+        }
+        p a:only-child{
+            font-size: 2em;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Lorem.</a> Maxime omnis quasi a accusantium qui repudiandae architecto quae magni et tenetur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Lorem.</a> Maxime omnis quasi a accusantium qui repudiandae architecto <a href="">Similique</a> quae magni et tenetur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Lorem.</a> Maxime omnis quasi a accusantium qui repudiandae architecto quae <a href="">Similique</a> magni et tenetur?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Lorem.</a> Maxime omnis quasi a accusantium qui repudiandae architecto <a href="">Similique</a> quae magni et tenetur?</p>
+</body>
+</html>

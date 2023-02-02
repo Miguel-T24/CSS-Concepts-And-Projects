@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PseudoClass Selector Forms</title>
+
+    <style>
+
+        /* Part I */
+        /* p{
+            background-color: coral;
+            color: white;
+            padding: 30px;
+        }
+
+        input[type="checkbox"]:checked ~ p{
+            background-color: #66BFBF;
+            font-size: 1.1em;
+            text-decoration: line-through;
+        } */
+
+        /* Part II */
+        input:valid + p{
+            background-color: lawngreen;
+            border: 1px solid green;
+        }
+
+        input:invalid + p {
+            background-color: red;
+            border: 1px solid darkred;
+        }
+
+        input:required + p {
+            border: 2px solid black;
+        }
+        input:optional + p{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <h2>Part I</h2>
+    <input type="checkbox" id = "p-control">
+    <label for="p-control">Check Me</label>
+    
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti iure enim hic aliquam vero sint totam, obcaecati numquam odit, sed voluptate, labore eum fugit autem quia optio dolorem animi! Vitae minus magnam dignissimos eveniet ipsum neque minima hic, odit incidunt!</p>
+    
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti iure enim hic aliquam vero sint totam, obcaecati numquam odit, sed voluptate, labore eum fugit autem quia optio dolorem animi! Vitae minus magnam dignissimos eveniet ipsum neque minima hic, odit incidunt!</p>
+    
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti iure enim hic aliquam vero sint totam, obcaecati numquam odit, sed voluptate, labore eum fugit autem quia optio dolorem animi! Vitae minus magnam dignissimos eveniet ipsum neque minima hic, odit incidunt!</p> -->
+
+
+
+
+    <h2>Part II</h2>
+    <input type="number" id = "p-control" min = '15' max = "20" placeholder="number">
+    <p>it will be green if it's valid and red if it's invalid</p>
+
+    <input type="text" placeholder="Required" required>
+    <p>it will be green if it's valid and red if it's invalid</p>
+
+    <input type="text" placeholder="Optional">
+    <p>it will be green if it's valid and red if it's invalid</p>
+
+
+</body>
+</html>
