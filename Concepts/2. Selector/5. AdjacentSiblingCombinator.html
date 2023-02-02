@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjacent Sibling combinator</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            height: 70px;
+            color: white;
+        }
+
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .yellow{
+            background-color: yellow    ;
+        }
+
+        /* I can assign a property to next element*/
+        h1 + div {
+            border: 5px dotted #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">
+        <p>Red</p>
+    </div>
+    <h1>Heading 1</h1>
+    <div class="green">
+        <p>Green</p>
+    </div>
+    <div class="blue">
+        <p>Blue</p>
+    </div>
+    <div class="yellow">
+        <p>Yellow</p>
+    </div>
+</body>
+</html>

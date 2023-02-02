@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1. basic.css">
+    <title>Selector</title>
+
+    <style>
+                /* by element */
+        p{
+            color: white;
+            background-color: brown;
+        }
+
+        /* by class */
+        .highlight{
+            color: black;
+            background-color: yellow;
+        }
+
+        .lead{
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        .text-uppercase{
+            text-transform: uppercase;
+        }
+
+        /* by id */
+        #main-paragraph{
+            padding: 20px;
+        }
+
+        /* descending */
+        .wrapper a{
+            color: green;
+        }
+    </style>
+
+
+</head>
+<body>
+    <p class = "highlight lead text-uppercase" id="main-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sint neque eveniet voluptatem alias beatae aspernatur atque suscipit quis dicta sapiente iure consectetur cumque ipsam, impedit sed nostrum? Recusandae alias explicabo vitae earum reprehenderit, fugit nemo qui distinctio veritatis accusamus.</p>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sint neque eveniet voluptatem alias beatae aspernatur atque suscipit quis dicta sapiente iure consectetur cumque ipsam, impedit sed nostrum? Recusandae alias explicabo vitae earum reprehenderit, fugit nemo qui distinctio veritatis accusamus.</p>
+    <p class = "highlight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sint neque eveniet voluptatem alias beatae aspernatur atque suscipit quis dicta sapiente iure consectetur cumque ipsam, impedit sed nostrum? Recusandae alias explicabo vitae earum reprehenderit, fugit nemo qui distinctio veritatis accusamus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sint neque eveniet voluptatem alias beatae aspernatur atque suscipit quis dicta sapiente iure consectetur cumque ipsam, impedit sed nostrum? Recusandae alias explicabo vitae earum reprehenderit, fugit nemo qui distinctio veritatis accusamus.</p>
+
+
+    <!-- Descending example -->
+    <div class="wrapper">
+        <a href="https:/www.google.com">Go to google</a>
+    </div>
+
+</body>
+</html>
