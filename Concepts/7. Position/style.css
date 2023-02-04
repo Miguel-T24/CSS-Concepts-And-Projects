@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #000;
+    font-size: 3em;
+    margin: 2em;
+}
+
+h1{
+    color: #fff;
+    text-align: center;
+}
+
+div{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.261);
+    border-radius: 5px;
+    padding: 0 20px;
+}
+
+.static{
+    background-color: #ddd;
+}
+.relative{
+    background-color: #81c476;
+}
+.absolute{
+    background-color: #fc9191;
+}
+.fixed{
+    background-color: #a8d5e2;
+}
+.sticky{
+    background-color: #e1e1ac;
+}
+
+
+/* Working with Positions */
+
+
+/* position static is default */
+.static{
+    position: static;
+}
+
+/* Position Relative */
+/* You can move element but the original space is preserved */
+
+/* You need to use top, left, bottom and right to move the element but the firts two take precedence*/
+
+/* Also you can use negative number to move the elements */
+.relative{
+    position: relative;
+    top: 10px;
+    left: 20px;
+    /* bottom: 20px;
+    /* right: 20px; */
+
+}
+
+/* Position Absolute */
+
+/* This positions leaves the natural flow */
+/* if we want to move this element, we can use the same properties of positions relative, the unique difference is the element with position absolute will be positioned with respect to the father
+
+In this case, the element who have "parent" class, don't have position property, so will be positioned respect body
+
+But if "parent" would have position different "position static" the actual element will be positioned with respect "parent"
+*/
+
+/* .parent{
+    position: relative;
+} */
+
+.absolute{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+     /* we can stretch the element with right and bottom*/
+    right: 0;
+    /* bottom: 0; */
+}
+
+/* Position Fixed */
+
+/* Leave Natural flow 
+
+    this position, will be positioned with respect to the viewport
+*/
+
+
+/* If we asign body 300vh, we can see this position keep fixed */
+
+body{
+    min-height: 300vh;
+}
+.fixed{
+    position: fixed;
+    top: 50%;
+    left: 50%; /* In the middle*/
+    /* we can stretch the element with right and bottom*/
+    right: 0;
+    /* bottom: 0; */
+}
+
+/* Position Sticky */
+
+/* we have locate container block that contain the element, in this case the container that contain "parent" class.
+Now we have identify the firts container that contain displacement mechanism, in this case is "body" because we assign min-height: 300vh in the body
+
+this put the element fixed in the "body" as long as it does not leave the container
+*/
+.sticky{
+    position: sticky;
+    top: 0; /* In this case this element keep to 0px of the body because the body have displacement mechanims*/
+}
