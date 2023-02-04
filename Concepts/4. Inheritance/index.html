@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+
+    <style>
+        h1{
+            color: green;
+        }
+
+        p{
+            color: red;
+        }
+
+        .link{
+            color: inherit;
+        }
+
+        .title2{
+            color: yellow;
+        }
+        .span{
+            color: initial;
+            font-size: initial;
+            font-family: initial;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Here we can see that the "span" property inherits the properties of h1  -->
+    <h1>hello <span>World!</span></h1>
+
+    <!-- Here we can see that the "a" property don't inherits the properties of p-->
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum quis placeat minima fugit blanditiis quas minus! Magni fugit accusamus, nulla quod ab ipsam officia quis illo temporibus? Dolore nihil molestiae  <a href="#">Link</a> ipsam unde adipisci harum accusantium eos, nobis, veritatis quisquam expedita eligendi qui iste deleniti nam? Architecto, nobis. Tempore, hic corporis?</p>
+
+    <!-- If we want force the ineritance, we can use inherit -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eum voluptatum odit! Excepturi porro dolorum maiores optio nam esse sit error, qui dignissimos earum fuga doloremque veritatis facere consequuntur tempore voluptatem nulla recusandae necessitatibus aperiam nobis? Ullam, illo. Iusto dolores earum quasi nobis atque necessitatibus, ab consectetur ipsum reiciendis. Quas reprehenderit ratione minus libero aperiam possimus praesentium itaque quae veniam ea <a href="#" class="link">Here is a LINK</a> velit illum sunt quis facere quidem et voluptatum facilis, inventore rem sapiente tempore ex, quod magnam. Unde aliquam odit consequuntur animi ratione repudiandae deserunt, perferendis eius molestias veritatis eveniet culpa esse, vero veniam? Quasi distinctio facilis magnam ut inventore.</p>
+
+    <!-- If we want a label not to inherit -->
+    <h2 class="title2">This is a <span class="span">Example</span> of not to inherit</h2>
+
+</body>
+</html>

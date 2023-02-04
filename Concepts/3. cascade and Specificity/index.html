@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascade and Specificity</title>
+    <!-- Formula
+        
+        Tags and pseudoelements 001
+        Classes, Attributes and pseudoclasses 010
+        ids 100
+        Inline Styles 1000
+
+        !important
+    -->
+    <style>
+        h1.title#title{
+            background-color: tomato;
+        }
+        h1{
+            background-color: red;
+        }
+
+        h1.title{
+            background-color: yellow;
+        }
+
+        h1#title{
+            background-color: teal ;
+        }
+
+        h1.title{
+            background-color: red;
+        }
+        /* it's recomendated always use classes and never use !important */
+
+        /* The cascade works if the specificity over element be always the same */
+    </style>
+</head>
+<body>
+    <h1 id="title" class="title">Fundamentos CSS</h1>
+</body>
+</html>

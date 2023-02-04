@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSL</title>
+    <!-- HSL
+        H : Hue
+        S : Saturation
+        L : Lightness
+
+        H : "Huge"
+        0 -> Red
+        60 -> Yellow
+        120 -> Green
+        180 -> Cyan
+        240 -> blue
+        300 -> Magenta
+
+        S : "Saturation"
+        0% -> grey
+        100% -> white, pure color
+
+        L : Lightness
+        0% -> black, none light
+        100% -> white, max light
+    -->
+    <style>
+        body{
+            background-color:hsl(60, 100%, 50%);
+            /* with transparency */
+            background-color: hsla(60, 100%, 50%, 0.5);
+            background-color: hsla(60 100% 50% / 0.5);
+        }
+        .main{
+
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
