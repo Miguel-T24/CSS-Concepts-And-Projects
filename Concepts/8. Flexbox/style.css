@@ -1,0 +1,252 @@
+.container{
+    margin: auto;
+    display: flex;
+    width: 400px;
+    background-color: pink;
+    border: 2px solid darkred;
+}
+
+.container > *{
+    margin: 5px 10px;
+    padding: 5px;
+    border: 2px solid blue ;
+    background-color: lightgreen;
+}
+
+
+
+/* Flex Direction */
+
+/* 
+
+flex : row;             -> By Default
+flex : row-reverse      -> align items like reverse row
+flex : column           -> Align items like columns
+flex : column-reverse   -> Align Items like columns reverse
+
+*/
+.container{
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; */
+}
+
+/* flex-wrap */
+
+/* 
+this property identifies us if we want the itemas to occupy a new row or shrink in the same row
+
+nowrap (By default)  -> don't occupy a new file
+wrap                 -> occupy a new line
+
+*/
+
+.container{
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+}
+
+/* Flex Flow */
+/* Shorthand of flex-direction and flex-wrap
+
+flex-flow: flex-direction flex-wrap;
+
+*/
+.container{
+    flex-flow: row wrap;
+}
+
+/* Justify Content */
+
+/* Align elements in the main axis
+
+values of this property are::after
+
+flex-start (By default)
+flex-end
+center
+space-between
+space-around
+space-evenly
+
+*/
+
+.container{
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+
+/* Align Items */
+
+/* 
+
+align element in the cross axis
+
+flex-start
+flex-end
+center
+stretch
+baseline
+
+*/
+
+/* to se behavior */
+.container{
+    height: 500px
+}
+.item-1{
+    height: 100px;
+}
+.item-2{
+    height: 70px;
+}
+.item-3{
+    height: 200px;
+}
+.item-4{
+    height: 150px;
+}
+
+/* Now prove align-items */
+
+.container{
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: stretch; /* Make the element take the max height of the container*/
+    align-items: baseline; /* Line of align is in base of text*/
+}
+
+
+ /* Align content */
+
+ /* requiere 
+ 
+ flex-flow : wrao o wrap-reverse and multiline
+
+ */
+
+ .container{
+    display: flex;
+    width: 300px;
+    height: 600px;
+    flex-flow: row wrap;
+ }
+
+ .container > div{
+    height: 100px;
+ }
+
+ .container{
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around;
+ }
+
+ /* Ordering */
+
+/* Order*/
+/* .container{
+    display: flex;
+    width: 600px;
+    height: 200px;
+}
+
+.item-1{
+    order: 1;
+}
+
+.item-2{
+    order: 2;
+}
+
+.item-3{
+    order: 0;
+}
+
+.item-4{
+    order: 3;
+} */
+
+
+/* flex-grow */
+
+.container{
+    display: flex;
+    width: 800px;
+    height: 100px;
+}
+
+.container > div{
+    height: 20px;
+}
+.item-1{
+    flex-grow: 1;
+}
+
+.item-2{
+    flex-grow: 2;
+}
+
+
+/* flex-shrink */
+
+.item-1{
+    flex-shrink: 1;
+}
+
+.item-2{
+    flex-shrink: 2;
+}
+
+/* Flex basis */
+
+/* it grow and not overflow */
+
+.container{
+    flex-wrap: nowrap;
+}
+
+.item-4{
+    flex-basis: 1000px;
+}
+
+/* shorthand of
+
+flex-grow , flex-shrink, flex-basis
+
+
+is flex 
+*/
+
+
+
+/* align self, align individual item */
+
+/* values are
+
+flex-start
+flex-end
+center
+stretch
+baseline
+
+*/
+
+.item-1{
+    align-self: flex-start;
+    align-self: flex-end;
+    align-self: center;
+    align-self: stretch;
+    align-self: baseline;
+}

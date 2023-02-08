@@ -1,0 +1,343 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a[href="#top"] {
+  margin: 1rem;
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 50vh;
+  text-align: center;
+}
+
+img {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.menu {
+  margin-bottom: 100vh;
+  font-size: 125%;
+}
+
+.menu li {
+  margin-bottom: 1rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  height: 80vh;
+  background-color: #222;
+  border: medium solid #000;
+}
+
+.item {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #666;
+  border: medium solid #999;
+}
+
+.sub-item{
+  padding: 1rem;
+  background-color: #DDD;
+  border: medium solid #ccc;
+}
+
+.grid-explicit{
+  display: grid;
+  /* Grid de 3x3 */
+  /* Cada uno de los valores representa una fila o una columna */
+  grid-template-rows: 2rem 20vh 30%;
+  grid-template-columns: 50% 100px 1fr;
+  /* grid de 4x5 */
+  /* El primer valor del repeat indica cuando files o columnas quieres que haya y el segundo valor indica cuanto espaico quieres que ocupe */
+  grid-template-columns: repeat(5,20%);
+  grid-template-rows: repeat(4,auto);
+  /* Las fracciones usan el espacio sobrante, en este caso el espacio sobrante es del 100% por lo que reparten en parte iguales */
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(4,1fr);
+  /* grid 5x4 */
+  grid-template-rows: auto ;
+  grid-template-columns: 20% repeat(2,30%) 20%;
+
+  /* Espacio entre elementos, por fila y columnas */
+  /* grid-row-gap: 1rem;
+  grid-column-gap: 2rem;
+  gap: 1rem 2rem; */
+}
+
+.grid-explicit .item:nth-child(10){
+  color: red;
+
+  /* grid-row-start:2;
+  grid-row-end:3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row: 2/3;
+  grid-column:3/5 ; */
+  /* shorthand para grid-row y grid-column */
+  grid-area: 1/3/2/5; 
+}
+
+
+/* .grid-explicit .item:nth-child(15){
+  color: cyan;
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.grid-explicit .item:nth-child(19){
+  color: bisque;
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 3; 
+} */
+
+.grid-line-names{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  /* Darle nombre a las cuadriculas */
+  grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3] 1fr [linea-c4];
+  grid-template-rows: [linea-r1] 1fr [linea-r2] 1fr [linea-r3] 1fr [linea-r4];
+
+  /* Si queremos que las cuadriculas tengan su valor automatico, es decir, que ocupe lo que ocupa su contenido entonce le colocamos auto a los nombre d elas fila sy columnas */
+  grid-template-columns: [linea-c1] auto [linea-c2] auto[linea-c3] auto [linea-c4];
+  grid-template-rows: [linea-r1] auto [linea-r2] auto[linea-r3] auto [linea-r4];
+}
+
+.grid-line-names .item:nth-child(3){
+  color: red;
+  grid-row: linea-r3 / linea-r4;
+  grid-column: linea-c1 / linea-c4; 
+}
+
+.grid-areas{
+  display: grid;
+  grid-template-rows: 100px repeat(2,1fr) 60px;
+  grid-template-columns: 1fr 200px;
+
+  grid-template-areas: 
+  "header header"
+  "content sidebar"
+  "content ."
+  "footer footer"
+  ;
+}
+
+.header{
+  grid-area: header;
+}
+
+.content{
+  grid-area: content;
+}
+
+.sidebar{
+  grid-area: sidebar;
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.grid-implicit{
+  display: grid;
+  grid-template-rows: repeat(3,200px);
+  grid-template-columns: repeat(4,1fr);
+}
+
+
+.grid-flow{
+  display: grid;
+  /* 5cx4r */
+  grid-template-rows: repeat(3,150px);
+  grid-template-columns: repeat(5,1fr);
+  grid-auto-flow: row;
+  grid-auto-flow: column;
+}
+
+
+.grid-layers{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,1fr);
+}
+
+.grid-layers .item:nth-child(1){
+  background-color: #DBEA33;
+  grid-row:1/3;
+  grid-column: 1/3; 
+
+  grid-area: 1/1/3/3;
+}
+
+.grid-layers .item:nth-child(2){
+  background-color: #497AF8;
+  grid-row: 1/3;
+  grid-column: 3/5;
+
+  grid-area: 1/3/3/5;
+}
+
+.grid-layers .item:nth-child(3){
+  background-color: #90E971;
+  grid-row: 3/5;
+  grid-column: 1/3;
+
+  grid-area: 3/1/5/3;
+}
+
+.grid-layers .item:nth-child(4){
+  background-color: #F0952A;
+  grid-row: 3/5;
+  grid-column: 3/5;
+
+  grid-area: 3/3/5/5;
+}
+
+
+.grid-layers .item:nth-child(5){
+  background-color: red ;
+  opacity: 75%;
+  grid-row: 2/4;
+  grid-column: 2/4;
+
+  grid-area: 2/2/4/4;
+}
+
+.grid-order{
+  display: grid;
+  grid-template-rows: repeat(2,1fr) ;
+  grid-template-columns:repeat(3,1fr) ;
+}
+
+.grid-order .item:nth-child(1){
+  order:1; 
+}
+
+.grid-order .item:nth-child(2){
+  order:2;
+}
+
+.grid-order .item:nth-child(5){
+  order:-1;
+}
+
+.grid-align{
+  display: grid;
+  grid-template-rows: repeat(2,200px) ;
+  grid-template-columns: repeat(3,200px);
+  justify-items: center;
+  justify-items: start;
+  align-items: end;
+}
+
+.grid-align .item:nth-child(4){
+    justify-self: start;
+    align-self: start ;
+}
+
+.grid-align-tracks{
+  display: grid;
+  grid-template-rows: repeat(2,200px);
+  grid-template-columns: repeat(3,200px);
+  /* Alineamiento en eje principal en este caso x */
+  justify-content: end;
+  justify-content: start;
+  justify-content: space-around;
+  justify-content: space-between;
+  justify-content: space-evenly;
+
+  /* Alineamineto en el eje transversal en este caso y */
+  align-content: start;
+  align-content: end;
+  align-content: space-around;
+  align-content: space-between;
+  align-content: space-evenly;
+}
+
+
+.grid-min-max{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  /* El minimo al que se puede reducir cada elemento es a 100px y el maximo a 200px */
+  grid-template-columns: repeat(4,minmax(100px,200px));
+  /* El minimo sera lo que ocupe el contenido */
+  grid-template-columns: repeat(4,minmax(min-content,200px));
+  /* El tamaño maximo sera lo que ocupe el contenido */
+  grid-template-columns: repeat(4,minmax(100px,min-content));
+  /* Se puede hacer a la inversa, el tamaño maximo del contenido sera el tamaño de los tracks */
+  grid-template-columns: repeat(4,minmax(100px,max-content));
+}
+
+.grid-repeat{
+  display: grid;
+  grid-template-columns: repeat(4, 10% 20% 30% 40%);
+  /* Solucion: Repetir este patron solo una vez */
+  grid-template-columns: repeat(1, 10% 20% 30% 40%);
+
+  /* Grid-auto-rows se lo que sucede cuando se generan las filas explicitamente */
+  grid-auto-rows: 150px;
+  grid-auto-rows: repeat(2,100px 200px);
+}
+
+.grid-dynamics{
+  display: grid;
+  grid-template-columns: repeat(4,100px);
+  /* auto-fill Rellena la grid con tracks generados dinamicamente */
+  grid-template-columns: repeat(auto-fill,100px);
+  /* Auto-fit ajusta la grid con los tracks existentes */
+  grid-template-columns: repeat(auto-fit,100px);
+  grid-template-columns: repeat(auto-fill,minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+}
+
+.grid-responsive{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1vw;
+}
+
+.grid-nested{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+
+.subgrid{
+  /* Patra que la caracterpistica de subgri funcione es necesario hacerr los siguiente */
+
+  /* 1. Definir Explicitamente el tamaño que ocupará el elemento que aplicará subgrid dentro dle contenedor padre grid, es decir, definir sus propiedades gri-column y grid-row */
+
+  grid-column: span 3;
+  grid-row: 1/3;
+
+}
