@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit Size</title>
+</head>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-color: darkslategray;
+    }
+    .title{
+        /* Title by default is 2em 
+            by dafult the font-size of entire browser is 16px, that's mean 2em in the h1 is equal 32px
+        */
+
+        /* The first tree font-size is the same size */
+        font-size: 2rem;
+        font-size: 2em;/* Context in this case is 16px, that's mean in this case the em and rem have same size*/
+        font-size: 32px ;
+        color: coral;
+    }
+
+    /* if the measure have to grow on "text-size" based, it's recommend to use em */
+    .link{
+        position: relative;
+        top: 40px;
+        background-color: lightcoral;
+        color: #333;
+        padding: 1em 2em;
+        border-radius: 0.5em;
+        text-decoration: none;
+        font-size: 1rem; 
+    }
+</style>
+
+<!-- 
+    
+    rem ->  Measure of the "m" of the root of the project
+    em -> Measure of the "m" of the context
+
+    Note: the "em" and "rem" will be calculate based on the font-size property
+
+    by dafult of browser, the size of the font is 16px
+
+    it's most recommend to use rem
+-->
+
+
+<body>
+
+    <h1 class = "title">EM vs REM</h1>
+
+    <!-- this is a example to use em -->
+    <a href="#" class ="link">I'm a button</a>
+</body>
+</html>
