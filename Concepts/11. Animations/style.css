@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:  border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animation
+
+animation-name: myanimation
+animation-duration: seconds
+animation-delay: duration of delay
+animation-direction : normal | alternate | reverse | alternate-reverse | 
+
+animation-timing-function: ease | ease-in | ease-out | linear 
+
+animation-iteracion-count: number of times
+
+*/
+
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: lightseagreen;
+
+    /* animation-name: myanimation;
+    animation-duration: 4s; */
+    /* animation-delay: 2s; */
+    /* position: relative;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+    animation-timing-function: ease;
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 2; infinite */
+    
+    
+    position: relative;
+    animation: myanimation 4s 2s reverse linear 2; 
+
+    /* Animation
+    - animation-name
+    - animation-duration
+    - animation-delay
+    - animation-direction
+    - animation-timing-function
+    - animation-count
+    */
+}
+
+@keyframes myanimation{
+    0%{
+        background-color: lightseagreen;
+        left: 0;
+        top: 0;
+    }
+    25%{
+        background-color: red;
+        left: 300px;
+        top: 0;
+    }
+    50%{
+        background-color: green;
+        left: 300px;
+        top: 300px;
+    }
+    75%{
+        background-color: pink;
+        left: 0;
+        top: 300px;
+    }
+    100%{
+        background-color: blue;
+        left: 0;
+        top: 0;
+    }
+}
