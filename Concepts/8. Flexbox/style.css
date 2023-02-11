@@ -36,7 +36,7 @@ flex : column-reverse   -> Align Items like columns reverse
 /* flex-wrap */
 
 /* 
-this property identifies us if we want the itemas to occupy a new row or shrink in the same row
+this property identifies us if we want the items to occupy a new row or shrink in the same row
 
 nowrap (By default)  -> don't occupy a new file
 wrap                 -> occupy a new line
