@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:  border-box;
+}
+
+.transition-1{
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    border-radius: 50%;
+    /* transition: Action durations timming-function delay */
+    transition: width 2s ease 2s;
+}
+
+.transition-1:hover{
+    width: 300px;
+    background-color: red;
+}
+
+/* transition timing function use
+ease: beginning slow and them fast and them slow final
+
+Linear: same speed from beginnig to end
+
+ease-in: beginnig slow
+ease-out: slow final
+
+*/
+
+
+.transition-2{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+
+    transition: width 3s, height 3s, backgroud-color 3s
+}
+
+.transition-2:hover{
+    background-color: #fccccc;
+    width: 200px;
+    height: 200px;
+    transform: translate(90deg);
+}
